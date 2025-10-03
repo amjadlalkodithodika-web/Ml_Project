@@ -110,7 +110,7 @@ with tab1:
         st.write("“Hello, loyal KFC fan — we’re capturing customer fried chicken preferences to serve the right flavor, "
                  "to the right person, at the right time — making every bite feel made just for them.”")
 
-        st.image("KFC - PROJECT TET.jpg", use_container_width=True)
+        st.image(r"C:\Users\amjad\OneDrive\ML project\KFC_friedchicken\KFCPROJECTpic.jpg", use_container_width=True)
 
         # --- Input Widgets (with placeholders) ---
         age = st.number_input("Enter Your Age *", min_value=0, max_value=100, step=1,
