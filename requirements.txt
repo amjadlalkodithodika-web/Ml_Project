@@ -1,6 +1,7 @@
 qrcode[pil]>=7.4.2,<8
 Pillow>=10.0.0,<11
 xgboost>=2.0.0,<2.1
+scikit-learn>=1.5.0,<1.6
 
 
 # Core scientific stack
@@ -18,3 +19,25 @@ streamlit>=1.38.0,<1.39
 # Visualization (optional but common)
 matplotlib>=3.9.0,<3.10
 seaborn>=0.13.2,<0.14
+
+
+# Core scientific stack
+numpy>=2.1.0,<2.2
+pandas>=2.2.2,<2.3
+scikit-learn>=1.5.0,<1.6
+scipy>=1.14.0,<1.15
+imbalanced-learn>=0.12.3,<0.13
+
+# App framework (pinned for API stability)
+streamlit>=1.38.0,<1.39
+
+# Visualization
+matplotlib>=3.9.0,<3.10
+seaborn>=0.13.2,<0.14
+
+# QR code + image handling
+qrcode[pil]>=7.4.2,<8
+Pillow>=10.0.0,<11
+
+# ML model dependencies
+xgboost>=2.0.0,<2.1
