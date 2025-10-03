@@ -110,7 +110,7 @@ with tab1:
         st.write("“Hello, loyal KFC fan — we’re capturing customer fried chicken preferences to serve the right flavor, "
                  "to the right person, at the right time — making every bite feel made just for them.”")
 
-        st.image(r"C:\Users\amjad\OneDrive\ML project\KFC_friedchicken\assets\KFCPROJECTpic.jpg", use_container_width=True)
+        st.image("assets/KFCPROJECTpic.jpg", use_column_width=True)
 
         # --- Input Widgets (with placeholders) ---
         age = st.number_input("Enter Your Age *", min_value=0, max_value=100, step=1,
@@ -204,7 +204,7 @@ with tab1:
                     st.subheader("📱 Scan to View Full Menu")
                     c1, c2, c3 = st.columns([1,2,1])
                     with c2:
-                        st.image(buf, use_container_width=False, caption="Scan me for the KFC Menu")
+                        st.image(buf, use_column_width=False, caption="Scan me for the KFC Menu")
 
                 except Exception as e:
                     st.error(f'Error in prediction {e}')
