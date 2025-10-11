@@ -114,7 +114,7 @@ with tab1:
 
         # --- Input Widgets (with placeholders) ---
         age = st.number_input("Enter Your Age *", min_value=0, max_value=100, step=1,
-                               value=None,placeholder="Enter Your Age...")
+                               value=None,placeholder="Click to Enter Your Age...")
 
         # gender = st.selectbox("Choose Your Gender *", ["Gender", "Male", "Female"],
                             #   key="gender", index=["Gender","Male","Female"].index(st.session_state.get("gender","Gender")))
@@ -123,15 +123,15 @@ with tab1:
                                 # key="location", index=["Location","Rural","Urban"].index(st.session_state.get("location","Location")))
 
         amount = st.number_input("Enter Your Expected Amount", min_value=0,
-                                 key="amount", value=None,placeholder="Enter your Amount..")
+                                 key="amount", value=None,placeholder="Click to Enter your Amount..")
 
         spicy = st.selectbox("Choose Your Spicy_Tolerances *", ["Spicy","Low","Medium","High"],
-                              index=None,placeholder="Select your Spicy Tolerance")
+                              index=None,placeholder="Click to Select your Spicy Tolerance")
 
         sweet = st.selectbox("Choose Your Sweetness_Pref *", ["Sweet","Low","Medium","High"],
-                             index=None,placeholder="Select your Sweet...")
+                             index=None,placeholder="Click to Select your Sweet...")
         crispy = st.selectbox("Choose Your Crunchiness_Pref *", ["Crispy","Low","Medium","High"],
-                              index=None,placeholder="Select your Sweet...")
+                              index=None,placeholder="Click to Select your Sweet...")
 
         # --- Buttons ---
         colA, colB = st.columns([1,1])
@@ -141,11 +141,11 @@ with tab1:
             clear_inputs = st.button("🧹 Clear Inputs")
 
         # --- Clear Inputs Logic ---
-        if clear_inputs:
-            for key in ["age", "amount", "spicy", "sweet", "crispy"]: #"gender", "location"
-                if key in st.session_state:
-                    del st.session_state[key]
-            st.rerun()
+        # if clear_inputs:
+        #     for key in ["age", "amount", "spicy", "sweet", "crispy"]: #"gender", "location"
+        #         if key in st.session_state:
+        #             del st.session_state[key]
+        #     st.rerun()
 
         # --- Prediction with Validation ---
         if predict_btn:
