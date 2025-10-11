@@ -114,7 +114,7 @@ with tab1:
 
         # --- Input Widgets (with placeholders) ---
         age = st.number_input("Enter Your Age *", min_value=0, max_value=100, step=1,
-                              key="age", value=st.session_state.get("age", 0))
+                               value=None,placeholder="Enter Your Age...")
 
         # gender = st.selectbox("Choose Your Gender *", ["Gender", "Male", "Female"],
                             #   key="gender", index=["Gender","Male","Female"].index(st.session_state.get("gender","Gender")))
@@ -123,16 +123,15 @@ with tab1:
                                 # key="location", index=["Location","Rural","Urban"].index(st.session_state.get("location","Location")))
 
         amount = st.number_input("Enter Your Expected Amount", min_value=0,
-                                 key="amount", value=st.session_state.get("amount", 0))
+                                 key="amount", value=None,placeholder="Enter your Amount..")
 
         spicy = st.selectbox("Choose Your Spicy_Tolerances *", ["Spicy","Low","Medium","High"],
-                             key="spicy", index=["Spicy","Low","Medium","High"].index(st.session_state.get("spicy","Spicy")))
+                              index=None,placeholder="Select your Spicy Tolerance")
 
         sweet = st.selectbox("Choose Your Sweetness_Pref *", ["Sweet","Low","Medium","High"],
-                             key="sweet", index=["Sweet","Low","Medium","High"].index(st.session_state.get("sweet","Sweet")))
-
+                             index=None,placeholder="Select your Sweet...")
         crispy = st.selectbox("Choose Your Crunchiness_Pref *", ["Crispy","Low","Medium","High"],
-                              key="crispy", index=["Crispy","Low","Medium","High"].index(st.session_state.get("crispy","Crispy")))
+                              index=None,placeholder="Select your Sweet...")
 
         # --- Buttons ---
         colA, colB = st.columns([1,1])
@@ -165,7 +164,7 @@ with tab1:
 #     unsafe_allow_html=True
 # )
             
-            if age == 0  or spicy == "Spicy" or sweet == "Sweet" or crispy == "Crispy":#or gender == "Gender"
+            if age is None  or spicy is None or sweet is None or crispy is None:#or gender == "Gender"
                 st.warning("⚠️ Please fill in all required fields (marked with *) before predicting.")
             else:
                 try:
